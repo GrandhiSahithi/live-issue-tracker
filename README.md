@@ -1,31 +1,32 @@
 # 🛠️ Live Issue Tracker
 
-A full-stack web application for tracking live software issues with real-time updates, status management, and priority filtering. Built with **React**, **Node.js**, **MongoDB**, and **Express**, this project demonstrates scalable backend design, RESTful APIs, and modern frontend architecture — perfect for showcasing on your resume or GitHub profile.
+A **full-stack issue tracking system** built with React, Node.js, Express, and MongoDB. This project helps you log, prioritize, and track software issues — ideal for learning, showcasing backend/frontend integration, and real-world teamwork scenarios.
+
+![GitHub Repo](https://img.shields.io/badge/Status-Working-brightgreen)  
+![Built with](https://img.shields.io/badge/Built%20with-React%2C%20Node.js%2C%20MongoDB-blue)
 
 ---
 
-## 🚀 Features
+## 🔧 Features
 
-- 🔄 Create, view, and manage software issues
-- 🎯 Set priority (Low, Medium, High) and status (default: Open)
-- 📊 Real-time display of all issues via React frontend
-- 🌐 RESTful API built with Express and MongoDB
-- 📦 Full-stack structure ready for deployment
+- ✅ Create new issues with title, description, and priority  
+- 📋 View a live list of all issues  
+- 📊 Auto-tagged with "Open" status  
+- 🔄 Real-time updates via React frontend  
+- 🌐 REST API with JSON responses  
+- 🛠️ Full CRUD backend ready for enhancements (filtering, status updates, auth)
 
 ---
 
-## 🧱 Tech Stack
+## ⚙️ Tech Stack
 
-### Frontend:
-- React.js
-- Axios
-- HTML/CSS (basic styling)
-
-### Backend:
-- Node.js
-- Express
-- MongoDB (Mongoose)
-- dotenv (for environment variables)
+| Layer       | Technology             |
+|------------|------------------------|
+| Frontend   | React, Axios           |
+| Backend    | Node.js, Express       |
+| Database   | MongoDB (Mongoose)     |
+| API Style  | RESTful                |
+| Styling    | Basic CSS              |
 
 ---
 
@@ -34,34 +35,34 @@ A full-stack web application for tracking live software issues with real-time up
 ```
 live-issue-tracker/
 ├── client/               # React frontend
-│   └── src/App.js
+│   └── src/App.js        # Main React component
 ├── server/               # Node + Express backend
-│   ├── models/Issue.js   # Mongoose schema
-│   ├── routes/issues.js  # REST API routes
 │   ├── index.js          # App entry point
-│   └── .env              # MongoDB connection URI
-└── data/db/              # MongoDB storage folder (used locally)
+│   ├── .env              # MongoDB URI
+│   ├── models/Issue.js   # MongoDB schema
+│   └── routes/issues.js  # API routes
+└── README.md
 ```
 
 ---
 
-## 🛠️ How to Run Locally
+## 🚀 Getting Started
 
-### 1. Clone the Repository
+### 🔽 Clone This Repo
 ```bash
-git clone https://github.com/your-username/live-issue-tracker.git
+git clone https://github.com/GrandhiSahithi/live-issue-tracker.git
 cd live-issue-tracker
 ```
 
-### 2. Install Dependencies
+### 📦 Install Dependencies
 
-Install backend dependencies:
+**Backend:**
 ```bash
 cd server
 npm install
 ```
 
-Install frontend dependencies:
+**Frontend:**
 ```bash
 cd ../client
 npm install
@@ -69,34 +70,25 @@ npm install
 
 ---
 
-### 3. Set Up MongoDB
+### 🧠 MongoDB Setup (Local)
 
-#### Option A: Local MongoDB
-Create data directory (if not already created):
+1. Create the MongoDB data directory:
 ```bash
 mkdir -p server/data/db
 ```
 
-Run MongoDB with:
+2. Run MongoDB locally:
 ```bash
-mongod --dbpath "absolute_path_to/server/data/db"
+mongod --dbpath "C:\Users\Admin\Downloads\live-issue-tracker\server\data\db"
 ```
 
-#### Option B: MongoDB Atlas
-Replace `.env` content with your cloud URI:
-```
-MONGO_URI=your_mongo_atlas_uri
-```
-
----
-
-### 4. Run Backend
+3. Start the backend:
 ```bash
 cd server
 node index.js
 ```
 
-### 5. Run Frontend
+4. Start the frontend:
 ```bash
 cd ../client
 npm start
@@ -104,29 +96,45 @@ npm start
 
 ---
 
-## 🔗 API Endpoints
+## 🔌 API Endpoints
 
-- `GET /api/issues` – Fetch all issues
-- `POST /api/issues` – Create a new issue
+| Method | Route         | Description         |
+|--------|---------------|---------------------|
+| GET    | /api/issues   | Get all issues      |
+| POST   | /api/issues   | Create new issue    |
 
-Sample JSON:
+**Sample POST body:**
 ```json
 {
   "title": "Login Bug",
-  "description": "Users can't log in",
+  "description": "User unable to log in",
   "priority": "High"
 }
 ```
 
+---
 
+## 🧪 Future Enhancements
 
-## 🙋‍♀️ Author
-
-**Sahithi Grandhi**  
-[LinkedIn](https://www.linkedin.com/in/sahithi-grandhi) • [GitHub](https://github.com/GrandhiSahithi)
+- [ ] Status update buttons (In Progress, Resolved, Closed)  
+- [ ] Filter by priority or status  
+- [ ] Data visualizations with Chart.js  
+- [ ] Authentication for users/admins  
+- [ ] Deployment (Render / Netlify)
 
 ---
 
-## 📜 License
+## ✍️ Author
 
-This project is licensed under the MIT License.
+**Sahithi Grandhi**  
+🎓 MSCS @ Chicago State University  
+📫 [sahithig1701@gmail.com](mailto:sahithig1701@gmail.com)  
+🌐 [GitHub](https://github.com/GrandhiSahithi)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+> 💡 *Feel free to fork, contribute, or use this as a resume project! Just credit the original.*
